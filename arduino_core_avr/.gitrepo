@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/arduino/ArduinoCore-avr.git
+	branch = master
+	commit = 60f0d0b125e06dbf57b800192c80e5f60d681438
+	parent = e989a453e8b4a2c2015ac0cf92d942a8a37c8b2c
+	method = merge
+	cmdver = 0.4.1
