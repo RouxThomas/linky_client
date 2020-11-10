@@ -12,7 +12,7 @@ include $(ROOT_DIR)/def_cross.mk
 include $(ROOT_DIR)/def_path.mk
 
 AVRCORE_INCLUDES = -I $(ARDUINO_CORE_DIR) \
-                   -I $(AVR_VARIANT_STD_DIR)
+                   -I $(ARDUINO_CORE_VARIANT_STD_DIR)
 
 VPATH = $(subst ' ',':',$(ARDUINO_CORE_DIR))
 

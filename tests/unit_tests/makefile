@@ -19,6 +19,11 @@ include $(ROOT_DIR)/def_path.mk
 #-------------------------------------- CROSS ---------------
 ifeq ($(PLATFORM),cross)
 include $(ROOT_DIR)/def_cross.mk
+
+env:
+	@mkdir -p $(EXE_DIR)
+	@mkdir -p $(ROOT_OBJ_DIR)
+	
 build_avr_core:
 	@make -C $(ARDUINO_CORE_AVR_MAKER) -f makefile build PLATFORM=$(PLATFORM) EXECUTABLE=$(EXECUTABLE)
 
