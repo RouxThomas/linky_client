@@ -1,4 +1,4 @@
-ROOT_DIR=$(CURDIR)/../../..
+ROOT_DIR=$(CURDIR)/../..
 
 ifndef PLATFORM
   $(error PLATFORM shall be defined !)

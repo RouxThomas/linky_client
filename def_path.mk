@@ -8,7 +8,7 @@ export ETHERNET_LIB_MAKER=$(ARDUINO_LIBRARY_DIR)/ethernet_maker
 export UTILS_DIR=$(ROOT_DIR)/utils
 export UTILS_MEMORY_DIR=$(UTILS_DIR)/memory
 
-export EDF_DIR=$(SOURCES_DIR)/edf
+export EDF_DIR=$(SOURCES_DIR)
 export EDF_READER_DIR=$(EDF_DIR)/reader
 export EDF_READER_IMPL_DIR=$(EDF_DIR)/reader_impl
 export EDF_ENCODER_DIR=$(EDF_DIR)/encoder
