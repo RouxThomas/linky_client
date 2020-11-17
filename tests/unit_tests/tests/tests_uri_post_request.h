@@ -2,7 +2,6 @@
 #define TESTS_POST_REQUEST_ENCODER_H_
 
 #include "test.h"
-#include "checker_bool.h"
 #include "checker_str.h"
 #include "uri_post_request.h"
 
@@ -13,7 +12,6 @@ public:
                            const uint16_t buffer_size,
                            const char* buffer2,
                            const uint16_t buffer2_size,
-                           checker_bool* bool_checker,
                            checker_str* str_checker);
 
     virtual ~tests_uri_post_request();
@@ -21,7 +19,6 @@ public:
 
 private:
     checker_str* str_checker;
-    checker_bool* bool_checker;
 
     const char* expected_request = NULL;
     const char* computed_request = NULL;

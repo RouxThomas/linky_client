@@ -8,13 +8,11 @@
 tests_encoder_default::tests_encoder_default(const char* test_name,
                                              const char* buffer,
                                              const int buffer_size,
-                                             checker_bool* bool_checker,
                                              checker_str* str_checker)
         : test(test_name) {
     const int to_encode_size = strlen(ENCODER_NOT_ENOUGH_FREE_SPACE_MSG) + 1;
-    assert(bool_checker != NULL && str_checker != NULL && to_encode_size < buffer_size);
+    assert(str_checker != NULL && to_encode_size < buffer_size);
 
-    this->bool_checker = bool_checker;
     this->str_checker = str_checker;
 
     this->to_encode = (char*) buffer;

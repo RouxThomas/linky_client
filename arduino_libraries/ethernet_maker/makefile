@@ -1,7 +1,7 @@
-ROOT_DIR=$(CURDIR)/..
+ROOT_DIR=$(CURDIR)/../..
 
 ifndef PLATFORM
-$(error PLATFORM shall be defined !)
+   $(error PLATFORM shall be defined !)
 else
 
 ifneq ($(PLATFORM),cross)
@@ -11,8 +11,8 @@ else
 include $(ROOT_DIR)/def_cross.mk
 include $(ROOT_DIR)/def_path.mk
 
-ETHERNET_INCLUDES = -I $(AVR_CORE_DIR) \
-                    -I $(AVR_VARIANT_STD_DIR) \
+ETHERNET_INCLUDES = -I $(ARDUINO_CORE_DIR) \
+                    -I $(ARDUINO_CORE_VARIANT_STD_DIR) \
                     -I $(SPI_LIB_DIR) \
                     -I $(ETHERNET_LIB_DIR)
 

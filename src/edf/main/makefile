@@ -1,11 +1,11 @@
 ROOT_DIR=$(CURDIR)/../../..
 
 ifndef PLATFORM
-$(error PLATFORM shall be defined !)
+  $(error PLATFORM shall be defined !)
 else
 
 ifndef EXECUTABLE
- $(error EXECUTABLE shall be defined !)
+  $(error EXECUTABLE shall be defined !)
 else
 
 include $(ROOT_DIR)/def_path.mk

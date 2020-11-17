@@ -21,12 +21,10 @@ tests_uri_post_request::tests_uri_post_request(const char* test_name,
                                                const uint16_t buffer_size,
                                                const char* buffer2,
                                                const uint16_t buffer2_size,
-                                               checker_bool* bool_checker,
                                                checker_str* str_checker)
         : test(test_name) {
-    assert(buffer != NULL && buffer2 != NULL && bool_checker != NULL && str_checker != NULL);
+    assert(buffer != NULL && buffer2 != NULL && str_checker != NULL);
 
-    this->bool_checker = bool_checker;
     this->str_checker = str_checker;
 
     buffer_tools::init((char*) buffer, buffer_size, '\0');
