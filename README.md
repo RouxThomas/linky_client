@@ -1,11 +1,11 @@
-# Linky client
+#Linky client
 
 ![Linky client logo](resources/enedis-linky-erdf.jpg)
 
 ## Description
 The Lynky client project objectives are :
- * To be abble to received Linky informations according to [Enedis-NOI-CPT_54E](resources/Enedis-Linky-NOI-CPT_54E.pdf) specifications
- * To transmit received informations to a web server via a [POST http request](https://en.wikipedia.org/wiki/POST_(HTTP))
+ * To be abble to received Linky informations via [RS232](https://en.wikipedia.org/wiki/RS-232) interface,  according to [Enedis-NOI-CPT_54E](resources/Enedis-Linky-NOI-CPT_54E.pdf) specifications
+ * To transmit raw informations to a web server via a [POST http request](https://en.wikipedia.org/wiki/POST_(HTTP)
  
 ## Hardware
 An [arduino Uno](https://www.arduino.cc/en/Guide/ArduinoUno) with its [Ethernet shield 2](https://www.arduino.cc/en/Guide/ArduinoEthernetShield) are used.
@@ -24,7 +24,41 @@ An [arduino Uno](https://www.arduino.cc/en/Guide/ArduinoUno) with its [Ethernet 
  * Tools :
     * [GNU make](https://www.gnu.org/software/make/manual/make.html)
     * [lcov](https://wiki.documentfoundation.org/Development/Lcov)
-    
+
+#### How to
+ * build cross executable :
+ 
+```shell_session
+$ cd ./src/main
+$ make build PLATFORM=cross CONFIGURATION=debug EXECUTABLE=linky
+```
+ * Download on arduino uno board:
+
+You have to configure usb interface before, set 'AVRDUDE_PORT' macro in ./def_cross.mk.
+
+```shell_session
+$ cd ./src/main
+$ make download
+```
+
+ * Build and run units tests (native):
+
+```shell_session
+$ cd ./tests/units_tests
+$ make build run PLATFORM=native CONFIGURATION=debug
+
+```
+
+ * Build and run units tests with coverage:
+
+```shell_session
+$ cd ./tests/units_tests
+$ make build run PLATFORM=native CONFIGURATION=debug COVERAGE=1
+```
+
+All artifacts are generated under ./build directory.
+
+     
 #### Configuration
  * followings [ git subrepo](https://github.com/ingydotnet/git-subrepo) are used
     * [ArduinoCore-avr](https://github.com/arduino/ArduinoCore-avr.git) : in directory arduino_core_avr
