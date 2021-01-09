@@ -8,7 +8,9 @@ The Linky client project objectives are :
  * To transmit raw informations to a web server via a [POST http request](https://en.wikipedia.org/wiki/POST_(HTTP)
  
 ## Hardware
-An [arduino Uno](https://www.arduino.cc/en/Guide/ArduinoUno) with its [Ethernet shield 2](https://www.arduino.cc/en/Guide/ArduinoEthernetShield) are used.
+ * An [arduino Uno](https://www.arduino.cc/en/Guide/ArduinoUno) 
+ * An [Ethernet shield 2](https://www.arduino.cc/en/Guide/ArduinoEthernetShield) are used.
+ * A [Custom hardware board](resources/domotique-info-schema.png)
 
 ## Software
  * Default IDE and toolchain are not used here.
