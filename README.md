@@ -4,7 +4,7 @@
 
 ## Description
 The Linky client project objectives are :
- * To be abble to received Linky informations via [RS232](https://en.wikipedia.org/wiki/RS-232) interface,  according to [Enedis-NOI-CPT_54E](resources/Enedis-Linky-NOI-CPT_54E.pdf) specifications
+ * To be abble to receive Linky informations via [RS232](https://en.wikipedia.org/wiki/RS-232) interface,  according to [Enedis-NOI-CPT_54E](resources/Enedis-Linky-NOI-CPT_54E.pdf) specifications
  * To transmit raw informations to a web server via a [POST http request](https://en.wikipedia.org/wiki/POST_(HTTP)
  
 ## Hardware
